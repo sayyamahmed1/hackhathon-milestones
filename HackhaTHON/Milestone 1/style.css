@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    background: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    cursor: default;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Resume container */
+.resume {
+    width: 960px;
+    background: #1a237e;
+    color: #ffffff;
+    margin: 20px auto;
+    box-shadow: 10px 10px #0e1442;
+    display: flex;
+}
+
+/* Left section - base */
+.resume .base {
+    width: 30%;
+    background: #283593;
+    padding: 30px 15px;
+    color: #ffffff;
+}
+
+/* Profile section */
+.resume .base .profile {
+    background: #ffb300;
+    padding: 30px 15px 40px;
+    margin: -30px -15px 45px;
+    position: relative;
+    z-index: 2;
+}
+
+.resume .base .profile::after {
+    content: "";
+    position: absolute;
+    background: #303f9f;
+    width: 100%;
+    height: 30px;
+    bottom: -15px;
+    left: 0;
+    transform: skewY(-5deg);
+    z-index: -1;
+}
+
+.resume .base .profile .photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.resume .base .profile .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume .base .profile .info {
+    text-align: center;
+}
+
+.resume .base .profile .info .name {
+    margin-top: 10px;
+    font-size: 1.75em;
+    color: #1a237e;
+}
+
+.resume .base .profile .info .job {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #283593;
+}
+
+.resume .base .contact div {
+    line-height: 24px;
+}
+
+.resume .base .contact div a:hover {
+    color: #fdd835;
+}
+
+.resume .base .contact div i {
+    color: #ffb300;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+    transition-duration: 0.3s;
+}
+
+.resume .base .follow .box a:hover {
+    color: #fdd835;
+}
+
+.resume .base .follow .box a {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 20px;
+    background: #0c1454;
+    border-radius: 50%;
+}
+
+.resume .base .follow .box a:hover {
+    background: #283593;
+}
+
+/* Function - skills section */
+.func {
+    width: 70%;
+    padding: 30px 20px;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Hidden class to hide the skills section */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+button {
+    background-color: #283593;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Progress bars and software skills circle animations */
+.skills-bar .bar {
+    height: 8px;
+    background-color: #ffb300;
+}
+
+.skills-soft li {
+    position: relative;
+}
+
+.skills-soft svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.skills-soft .cbar {
+    stroke: #ffb300;
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 282.6; /* Circumference of the circle */
+    stroke-dashoffset: 282.6;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.skills-soft li small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #ffb300;
+}
